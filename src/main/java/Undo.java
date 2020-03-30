@@ -34,6 +34,7 @@ public class Undo implements Commande_generique {
 	 * enregistre l'état courant de la pile.
 	 */
 	public void enregistrer() {
+		@SuppressWarnings("unchecked")
 		Stack<Double> res = (Stack<Double>) pile.clone();
 		etat.push(res);
 	}

@@ -11,7 +11,7 @@ public class Interpreteur {
 	
 	/* Le Constructeur */
 	
-	private Interpreteur() {
+	public Interpreteur() {
 		commandes = new HashMap<String,Commande_generique>();
 	}
 	/*
