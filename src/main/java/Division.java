@@ -1,12 +1,15 @@
 
 /*
- * La classe Commande concrète Division 
+ * La classe Commande concrÃ¨te Division.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public class Division implements Commande_calcul {
 	
-	/* La méthode calculer pour effectuer la division de deux nombres
-	 * @param1 operande1 numérateur
-	 * @param2 operande2 dénominateur
+	/* La mÃ©thode calculer pour effectuer la division de deux nombres
+	 * @param1 operande1 numÃ©rateur
+	 * @param2 operande2 dÃ©nominateur
 	 * @retrun la division de operande1 par operande2
 	 */
 	public double calculer( double operande1, double operande2) throws Exception {

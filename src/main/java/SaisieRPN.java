@@ -1,6 +1,10 @@
 import java.util.Scanner;
 import java.util.Stack;
-
+/*
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class SaisieRPN {
 	
 	/**
@@ -8,7 +12,7 @@ public class SaisieRPN {
 	 */
 	private Stack<Double> pile;
 	/**
-	 * scanner pour les entrées.
+	 * scanner pour les entrÃ©es.
 	 */
 	private Scanner s;
 	/**
@@ -35,32 +39,46 @@ public class SaisieRPN {
 		moteur = MoteurRPN.initialiser(pile, u);
 		interprete = Interpreteur.initialiser(u,q);
 	}
-	
+	/* renvoie la pile
+	 * @return une pile
+	 */
 	public Stack<Double> getPile(){
 		return pile;
 	}
+	/* renvoie l'interepteur
+	 * @return un interpreteur.
+	 */
 	public Interpreteur getInterprete(){
 		return interprete;
 	}
+	/* renvoie le moteur
+	 * @return un moteur.
+	 */
 	public MoteurRPN getMoteur(){
 		return moteur;
 	}
-	
-		public void SetMoteur(MoteurRPN m){
+	/* modifier le moteur
+	 * @param m un moteur.
+	 */
+	public void SetMoteur(MoteurRPN m){
 			this.moteur=m;
 	}
+	/* renvoie le undo
+	 * @return u un undo
+	 */
 	public Undo getU(){
 		return u;
 	}
+	/* renvoie le quit
+	 * @return un Quit
+	 */
 	public Quit getQ(){
 		return q;
 	}
-	
-	
 	/**
-	 * Saisir les opérandes et la commande puis effectuer le calcul
-	 * @return  résultat du calcul
-	 * @throws Exception si le résultat est invalide
+	 * Saisir les opÃ©randes et la commande puis effectuer le calcul
+	 * @return rÃ©sultat de calcul
+	 * @throws Exception si le rÃ©sultat est invalide
 	 */
 	public double calculer() throws Exception {
 		s = new Scanner(System.in);
@@ -70,10 +88,10 @@ public class SaisieRPN {
 		
 		System.out.print("********* CalculatriceRPN ********* \n");
 
-				System.out.print("\n Commandes autorisées : \n"
-		+ "- un nombre entier ou réel\n"
-		+ "- une opération parmis {+,-,*,/}\n"
-		+ "- \"undo\" pour revenir en arrière \n"
+				System.out.print("\n Commandes autorisï¿½es : \n"
+		+ "- un nombre entier ou rï¿½el\n"
+		+ "- une opï¿½ration parmis {+,-,*,/}\n"
+		+ "- \"undo\" pour revenir en arriï¿½re \n"
 		+ "- \"quit\" pour quitter l'applicaion :) \n \n ");
 		
 		System.out.print("---------- \n ");
@@ -83,25 +101,24 @@ public class SaisieRPN {
 
 		while (continuer) {
 			
-			
 			try { 
-				//récupérer un nombre
+				//rÃ©cuperer le nombre
 				d = s.nextDouble();
 				moteur.ajouter_operande(d);
 
 			} catch (java.util.InputMismatchException e) {
 				line = s.nextLine();
 				try { 
-					//récupérer une commande d'opération
+					//rÃ©cuperer une commande d'opÃ©ration
 					moteur.executer_commande(line);
 				} catch (Exception m) {
 					try {
-						//récupérer commande interprete
+						//rÃ©cuperer la commande interprete
 						interprete.executer_commande(line);
 						
 					} catch (Exception i) {
 						System.err.println(
-						"Commande non autorisée/"
+						"Commande non autorisï¿½e/"
 						+ "reconnue");
 					}
 				}
@@ -116,15 +133,15 @@ public class SaisieRPN {
 		}
 		s.close();
 		/*
-		 * si on a pas un seul opérande,
-		 * alors on peut pas calculer le résultat
+		 * si on a pas un seul opÃ©rande,
+		 * alors on peut pas calculer le rÃ©sultat
 		 */
 		if (pile.size() != 1) {
 			System.err.println(
-			"Il faut saisir un seul nomrbre puis Entrez pour saisir le deuxième");
+			"Il faut saisir un seul nomrbre puis Entrez pour saisir le deuxiï¿½me");
 			throw new Exception();
 		}
-		//retourne le résultat
+		//retourne le rÃ©sultat
 		System.out.println("resultat du calcul : " + pile);
 		return pile.pop();
 	}

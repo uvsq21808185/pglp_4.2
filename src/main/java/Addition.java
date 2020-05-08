@@ -1,13 +1,16 @@
 /*
- * La classe Commande concrète Addition
+ * La classe Commande concrÃ¨te Addition.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  * 
  */
 public class Addition implements Commande_calcul {
 	
-	/* La méthode pour effectuer l'addition de deux nombre
+	/* La mÃ©thode pour effectuer l'addition de deux nombre
 	 * @param1 operande1 nombre
-	 * @param2 operande2 deuxième nombre
-	 * @return le résultat de l'addition de operande1 et operande2
+	 * @param2 operande2 deuxiï¿½me nombre
+	 * @return le rÃ©sultat de l'addition de operande1 et operande2
 	 */
 
 	public double calculer(double operande1, double operande2) {

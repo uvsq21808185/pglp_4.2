@@ -2,13 +2,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-/* La classe Invoker du pattern Command
+/* La classe Invoker du pattern Command.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  * 
  */
 public class MoteurRPN {
 
 	/**
-	 * la pile qui contient les opérandes.
+	 * la pile qui contient les opÃ©randes.
 	 */
 	 private Stack<Double> pile;
 	 
@@ -17,14 +20,14 @@ public class MoteurRPN {
 		
 	 private Map<String, Commande_calcul> commandes;
 	/**
-	 * pour revenir en arrière.
+	 * pour revenir en arriÃ¨re.
 	 */
 		
 	 private Undo undo;
 	/**
 	 * constructeur de la classe.
-	 * @param pile_operandes la pile à empiler
-	 * @param undo  le undo à utiliser pour le retour en arrière
+	 * @param pile_operandes la pile Ã  empiler
+	 * @param undo  le undo Ã  utiliser pour le retour en arriÃ¨re
 	 */
 	 private MoteurRPN(final Stack<Double> pile_operandes, final Undo undo) {
 		pile = pile_operandes;
@@ -33,15 +36,15 @@ public class MoteurRPN {
 	}
 	
 	/**
-	 * exécute la commande associé à la clé nom.
-	 * @param nom la clé de la commande à exécuter
-	 * @return false si la commande n'a pu être exécuter et vrai sinon
+	 * exÃ©cute la commande associÃ© Ã  la clÃ© nom.
+	 * @param name la clÃ© de la commande Ã  exÃ©cuter
+	 * @return false si la commande n'a pu etre exÃ©cuter et vrai sinon
 	 * @throws Exception si la commande n'existe pas
 	 */
 	public boolean executer_commande(final String name) throws Exception {
 		if (commandes.containsKey(name)) {
 			if (pile.size() < 2) {
-				System.err.println("nombre d'opérandes "
+				System.err.println("nombre d'opÃ©randes "
 						+ "dans l'expression invalide");
 				return false;
 			}
@@ -62,8 +65,8 @@ public class MoteurRPN {
 		}
 	}
 	/**
-	 * ajoute un opérande à la pile
-	 * @param o opérande à ajouter
+	 * ajoute un opÃ©rande Ã  la pile
+	 * @param o opÃ©rande Ã  ajouter
 	 */
 	public void ajouter_operande(final double o) {
 		pile.push(o);
@@ -71,8 +74,8 @@ public class MoteurRPN {
 	}
 	/**
 	 * ajouter une commande.
-	 * @param nom la clé de la commande
-	 * @param commande la commande à insérer
+	 * @param nom la clÃ© de la commande
+	 * @param commande la commande Ã  insï¿½rer
 	 */
 	public void ajouter_commande(final String nom,
 			final Commande_calcul commande) {
@@ -80,8 +83,8 @@ public class MoteurRPN {
 	}
 	/**
 	 * initialise un moteur.
-	 * @param pile la pile qui sera manipulé
-	 * @param u le Undo qui sera utilisé pour le retour en arrière
+	 * @param pile la pile qui sera manipulï¿½
+	 * @param u le Undo qui sera utilisÃ© pour le retour en arriÃ¨re
 	 * @return un moteur construit
 	 */
 	public static MoteurRPN initialiser(final Stack<Double> pile, final Undo u) {

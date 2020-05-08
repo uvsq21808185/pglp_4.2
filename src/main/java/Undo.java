@@ -1,37 +1,41 @@
 import java.util.Stack;
-
+/* Classe Undo
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class Undo implements Commande_generique {
 
 	/**
-	 * pile de chaque état de la pile .
+	 * pile de chaque Ã©tat de la pile .
 	 */
 	private Stack<Stack<Double>> etat;
 	/**
-	 * pile contenant les opérandes.
+	 * pile contenant les opÃ©randes.
 	 */
 	private Stack<Double> pile;
 	/**
 	 * constructeur de la classe.
-	 * @param p  la pile qui contient les opérandes
+	 * @param p  la pile qui contient les opÃ©randes
 	 */
 	public Undo(final Stack<Double> p) {
 		pile = p;
 		etat = new Stack<Stack<Double>>();
 	}
 	/**
-	 * effectue un retour en arrière.
-	 * Exception  si la pile d'état est vide.
+	 * effectue un retour en arriÃ¨re.
+	 * Exception  si la pile d'Ã©tat est vide.
 	 */
 	public void executer() {
 		while (!pile.isEmpty()) {
 			pile.pop();
 		}
-		//si la pile est vide une exception est declenché
+		//si la pile est vide une exception est declenchï¿½
 		etat.pop();
 		copier_dernier_etat();
 		}
 	/**
-	 * enregistre l'état courant de la pile.
+	 * enregistre l'Ã©tat courant de la pile.
 	 */
 	public void enregistrer() {
 		@SuppressWarnings("unchecked")
@@ -39,7 +43,7 @@ public class Undo implements Commande_generique {
 		etat.push(res);
 	}
 	/**
-	 * copier le contenu du dernier état de la pile.
+	 * copier le contenu du dernier Ã©tat de la pile.
 	 */
 	private void copier_dernier_etat() {
 		for (double d : etat.lastElement()) {

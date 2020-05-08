@@ -1,16 +1,19 @@
-
+/*
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public enum  CalculatriceRPN {
 	
 	CALCULATRICE;
 	/**
 	 * La fonction main de mon programme CalculatriceRPN :
 	 * instanciation de la classe SaisieRPN  puis saisir morceau par morceau 
-	 * les éléments qu'on a besoin pour effectuer le calcul comme les opérandes
-	 * et les opérations qu'on veut appliquer, on peut à tout moment tapez undo
-	 * pour revenir en arrière à l'état précédent ou bien quit pour quitter l'application
-	 * une fois on a fini le calcul et afficher le résultat. 
-	 * @param args arguments pour le démarrage de l'application.
-	 * @throws Exception erreur d'exécution du resultat.
+	 * les elÃ©ments qu'on a besoin pour effectuer le calcul comme les opÃ©randes
+	 * et les opÃ©rations qu'on veut appliquer, on peut Ã  tout moment tapez undo
+	 * pour revenir en arriÃ¨re Ã  l'Ã©tat prÃ©cÃ©dent ou bien quit pour quitter l'application
+	 * une fois on a fini le calcul et afficher le rÃ©sultat. 
+	 * @param args arguments pour le dÃ©marrage de l'application.
+	 * @throws Exception erreur d'exÃ©cution du resultat.
 	 */
     public static void main(final String[] args) throws Exception {
  

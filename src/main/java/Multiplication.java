@@ -1,12 +1,15 @@
 /*
- * La Classe commande concrète Multiplication
+ * La Classe commande concrÃ¨te Multiplication.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public class Multiplication implements Commande_calcul {
 	/*
-	 * La méthode calculer pour effectuer la multiplication de deux opérandes
+	 * La mÃ©thode calculer pour effectuer la multiplication de deux opÃ©randes
 	 * @param1 operande1 nombre quelconque
 	 * @param2 operande2 nombre
-	 * @return le résultat de la multiplication de operande1 par operande2
+	 * @return le rÃ©sultat de la multiplication de operande1 par operande2
 	 */
 	
 	public double calculer(double operande1, double operande2) {

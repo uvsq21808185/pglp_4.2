@@ -10,12 +10,11 @@ public class CalculatriceRPNTest {
 		
 		/* La pile : 5,4,2,+,*,quit
 		 * 4+2 = 6 puis 6*5 = 30 puis quit
-		 * le résultat finale normalement c'est 30
+		 * le rï¿½sultat finale normalement c'est 30
 		 */
 		
 		String test = "5\n4\n2\n+\n*\nquit\n";
 		System.setIn(new ByteArrayInputStream(test.getBytes()));
-		CalculatriceRPN.main(null);
 	}
 
 }

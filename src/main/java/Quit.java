@@ -1,6 +1,9 @@
 
-/* La classe concrète du pattern Command 
- * pour quitter l'application
+/* La classe concrÃ¨te du pattern Command 
+ * pour quitter l'application.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public class Quit implements Commande_generique {
 	
@@ -11,11 +14,11 @@ public class Quit implements Commande_generique {
 		
 	};
 	
-	/* implémentation de la méthode executer pour quitter
+	/* implÃ©mentation de la mÃ©thode executer pour quitter
 	 * 
 	 */
 	public void executer() {
-		System.out.println("Vous avez quitté l'application");
+		System.out.println("Vous avez quittï¿½ l'application");
 	}
 
 }

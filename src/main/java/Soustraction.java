@@ -1,10 +1,13 @@
 
-/* La classe commande concrète Soustraction
+
+/* La classe commande concrÃ¨te Soustraction
  * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public class Soustraction implements Commande_calcul {
 	
-	/* Méthode calculer pour la soustraction de deux nombres
+	/* MÃ©thode calculer pour la soustraction de deux nombres
 	 * @param1 operande1 un nombre quelconque
 	 * @param2 operande2 le nombre qu'on veut soustraire
 	 * @retrun le resultat de soustraction de operande1 et operande2

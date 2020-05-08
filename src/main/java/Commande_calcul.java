@@ -1,10 +1,13 @@
 
-/* L'interface Commande_calcul du pattern Command pour les opérations
+/* L'interface Commande_calcul du pattern Command pour les opÃ©rations
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  * 
  */
 public interface Commande_calcul extends Commande {
 	
-	/* La méthode abstraite calculer qui sera implémenter par la suite dans chaque classe d'opération
+	/* La mÃ©thode abstraite calculer qui sera implÃ©menter par la suite dans chaque classe d'opÃ©ration
 	 * 
 	 */
 	public double calculer(double operande1, double operande2 ) throws Exception;
